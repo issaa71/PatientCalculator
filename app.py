@@ -138,8 +138,8 @@ def main():
     st.title("Hip Replacement Pain Predictor")
     st.markdown("""
     This tool predicts post-operative pain scores for hip replacement patients at two timepoints:
-    * **T3**: 6 weeks post-operation
-    * **T5**: 6 months post-operation
+    * **T3**: 3 years post-operation
+    * **T5**: 5 years post-operation
     
     **Note**: This calculator is based on statistical models and should be used only as a reference. 
     Actual patient outcomes may vary. Always consult with healthcare professionals for medical advice.
@@ -167,7 +167,7 @@ def main():
     
     # Sidebar
     st.sidebar.title("Pain Score Prediction")
-    timepoint = st.sidebar.radio("Select timepoint to predict:", ["T3 (6 weeks)", "T5 (6 months)"])
+    timepoint = st.sidebar.radio("Select timepoint to predict:", ["T3 (3 years)", "T5 (5 years)"])
     
     # Remove parentheses from timepoint string
     timepoint_code = timepoint.split(" ")[0]
@@ -332,8 +332,6 @@ def main():
         
         **Remember**:
         - This is a statistical prediction and individual results may vary
-        - The model has 40-49% accuracy within ±1 point of actual pain
-        - Always consult with healthcare professionals for medical advice
         """)
 
 def check_models_exist():
